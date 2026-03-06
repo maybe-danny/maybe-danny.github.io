@@ -11,25 +11,25 @@ function random(sum)
     if (sum > bal)
     {
         console.log("not enough money");
-        document.getElementById("result").innerText = "продай душу";
+        document.getElementById("result").innerText = "СЃСѓРјРјР° РґРµРїР° РїСЂРµРІС‹С€Р°РµС‚ Р±Р°Р»Р°РЅСЃ";
         return;
     }
     if (bal <= 0) 
     {
         console.log("you cant dep more");
-        document.getElementById("result").innerText = "продай душу";
+        document.getElementById("result").innerText = "Сѓ РІР°СЃ РЅРµС‚ РґРµРЅРµРі";
         return;
     }
 
     let rand = Math.random();
     if (rand < 0.1)
     {
-        document.getElementById("result").innerText = "вы выиграли $" + +sum;
+        document.getElementById("result").innerText = "РІС‹ РІС‹РёРіСЂР°Р»Рё $" + +sum;
         bal += +sum;
     }
     else
     {
-        document.getElementById("result").innerText = "вы проиграли $" + +sum;
+        document.getElementById("result").innerText = "РІС‹ РїСЂРѕРёРіСЂР°Р»Рё $" + +sum;
         bal -= +sum;
     }
     console.log("balance: " + bal);
