@@ -1,13 +1,10 @@
-let bal = 300;
+let bal = 500;
 document.getElementById("bal").innerText = bal;
 
-const depBtn = document.getElementById("dep");
-depBtn.addEventListener('click', function() {
-    random(document.getElementById('sumInput').value);
-});
-
-function random(sum)
+function random()
 {
+    sum = document.getElementById("sum").value;
+
     if (sum > bal)
     {
         console.log("not enough money");
@@ -22,7 +19,7 @@ function random(sum)
     }
 
     let rand = Math.random();
-    if (rand < 0.1)
+    if (rand < 0.3)
     {
         document.getElementById("result").innerText = "вы выиграли $" + +sum;
         bal += +sum;
@@ -34,9 +31,5 @@ function random(sum)
     }
     console.log("balance: " + bal);
     document.getElementById("bal").innerText = bal;
-    return;const depBtn = document.getElementById("dep");
+    return;
 }
-
-depBtn.addEventListener('click', function() {
-    random(document.getElementById('sumInput').value);
-});
