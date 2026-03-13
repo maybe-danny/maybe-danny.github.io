@@ -1,4 +1,4 @@
-let bal = 500;
+let bal = 10000;
 document.getElementById("bal").innerText = bal;
 
 function random()
@@ -19,7 +19,7 @@ function random()
     }
 
     let rand = Math.random();
-    if (rand < 0.3)
+    if (rand < 0.5)
     {
         document.getElementById("result").innerText = "вы выиграли $" + +sum;
         bal += +sum;
